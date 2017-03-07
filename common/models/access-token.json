@@ -13,6 +13,9 @@
     },
     "created": {
       "type": "Date"
+    },
+    "model":{
+      "type" :"string"
     }
   },
   "relations": {
