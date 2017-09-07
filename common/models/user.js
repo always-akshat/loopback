@@ -839,7 +839,7 @@ module.exports = function (User) {
 	});
 
 	// Delete old sessions once email is updated
-	User.observe('before save', function beforeEmailUpdate(ctx, next) {
+	/*User.observe('before save', function beforeEmailUpdate(ctx, next) {
 		var emailChanged;
 		if (ctx.isNewInstance) return next();
 		if (!ctx.where && !ctx.instance) return next();
@@ -894,17 +894,17 @@ module.exports = function (User) {
 			return u.id;
 		});
 
-		/*************************************************************
+		/!*************************************************************
 		 *
 		 * ABOVE written code in before and after save makes sure
 		 * that the user's previous AccessTokens are expired if the user's email/password
 		 * has changed. This app does notrequire that (right now). Commenting out
 		 *
-		 ****************************************************************/
+		 ****************************************************************!/
 
 		next();
 		//ctx.Model._invalidateAccessTokensOfUsers(userIdsToExpire, next);
-	});
+	});*/
 };
 
 function emailValidator(err, done) {
